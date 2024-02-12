@@ -3,6 +3,9 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
- <p>hello world</p>
+    <>
+      <p>hello world</p>
+      <p>Ryns test</p>
+    </>
   );
 }
