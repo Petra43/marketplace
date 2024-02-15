@@ -1,0 +1,13 @@
+body {
+    margin: 0; 
+    padding: 0; 
+    /*font-family: ; to do */
+  }
+
+  .footer {
+  background-color: #30240E; 
+  color: white;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+}

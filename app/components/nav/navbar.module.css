@@ -1,0 +1,73 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+  }
+
+
+.NavBar {
+    width: 100%;
+    height: 135px;
+    background: #30240E;
+    border-bottom: 1px solid whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+
+}
+
+.logo-container {
+    width: 100%;
+    height: 135px;
+    background: #30240E;
+    border-bottom: 1px solid whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 150px;
+}
+
+.search-bar {
+        color: white;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 150px;
+        display: flex;
+
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    
+}
+
+
+
+/* need to fix below media query - Anna*/
+@media (max-width: 844px) {
+    .NavBar, .search-bar {
+        padding: 0 0.1px; 
+        float: left;
+    }
+
+    .search-bar {
+        padding: 0 10px; 
+        width: 100%;  
+        display: none;
+    }
+
+    .logo-container {
+        display: none; 
+      }
+    
+      .burger-menu {
+        display: block; 
+      
+      }
+}
+
+
