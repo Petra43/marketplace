@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NavBar from "./components/nav/NavBar";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,13 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}
+      <body className={inter.className}>
       <NavBar/>
       {children}
       <footer className="footer">
-        <p>&copy; 2024 Little Handmade Market. All rights reserved.</p>
+        
       </footer>
       </body>
+      
     </html>
   );
 }
