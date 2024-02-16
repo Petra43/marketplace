@@ -3,7 +3,6 @@
 .container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
   }
 
 
@@ -15,8 +14,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 80px;
-  
-
 }
 
 .search-bar {
@@ -33,14 +30,12 @@
     position: absolute;
     top: 55px; 
     right: 20px; 
-
 }
 
 .search-mobile {
     display: none;
 }
 
-/* need to fix below media query - Anna*/
 @media (max-width: 844px) {
     .NavBar, .search-bar {
         padding: 0 0px; 
@@ -63,10 +58,9 @@
     .logo-container {
         display: block; 
       }
-    
+
       .burger-menu {
         display: block; 
-      
       }
 }
 
