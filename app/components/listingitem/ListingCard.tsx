@@ -5,7 +5,7 @@ import { ListingResult } from './producttypes';
 import styles from './productList.module.css';
 
 
-export default function ListingCard(listingResult:ListingResult): React.FC<{}> {
+export default function ListingCard({listingResult}): React.FC<{}> {
     return (
       <div className={styles.grid}>
         <div>

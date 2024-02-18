@@ -14,6 +14,7 @@ export default function Home() {
     category: "Knitted",
     thumbnailURL: "",
   }
+  
   return (
     <>
      <p>hello world</p>
