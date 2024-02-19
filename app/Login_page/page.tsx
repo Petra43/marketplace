@@ -48,7 +48,7 @@ export default function Home() {
           type="text"
           id="Email"
           name="Email"
-          value={formData.Email}
+          value={formData.username}
           onChange={handleInputChange}
           required
         />
