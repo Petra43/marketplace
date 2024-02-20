@@ -1,16 +1,10 @@
 'use client'
 import Image from "next/image";
 import styles from "./page.module.css";
-import React from "react";
+import React, { useState } from "react";
 
-
-interface FormData {
-  username: string;
-  password: string;
-}
-
-export default function Home() {
-  const [formData, setFormData] = React.useState<FormData>({
+export default function Login() {
+  const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
@@ -26,7 +20,7 @@ export default function Home() {
     console.log("Submitting form data:", formDataObject);
     // Implement email sign up logic here
   };
-
+  
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -39,25 +33,19 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <form className={styles.form} onSubmit={handleFormSubmit}>
-        <h2 className={styles.title}>Login</h2>
-        <label className={styles.label} htmlFor="Email">
-          Email:
-        </label>
+        <h1>Login</h1>
+        <label htmlFor="username">Email</label>
         <input
-          className={styles.input}
-          type="text"
-          id="Email"
-          name="Email"
+          type="email"
+          id="username"
+          name="username"
           value={formData.username}
           onChange={handleInputChange}
           required
         />
 
-        <label className={styles.label} htmlFor="password">
-          Password:
-        </label>
+        <label htmlFor="password">Password</label>
         <input
-          className={styles.input}
           type="password"
           id="password"
           name="password"
@@ -66,10 +54,14 @@ export default function Home() {
           required
         />
 
-        <button className={styles.button} type="submit">
-          Login
-        </button>
+        <div className={styles.rememberMe}>
+          <input type="checkbox" id="rememberMe" name="rememberMe" />
+          <label htmlFor="rememberMe">Remember me</label>
+        </div>
+
+        <button type="submit">LOG IN</button>
       </form>
+
     </div>
   );
 }
