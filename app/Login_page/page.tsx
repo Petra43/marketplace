@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import React, { useState } from "react";
 
+
 export default function Login() {
   const [formData, setFormData] = useState({
     username: "",
@@ -34,7 +35,9 @@ export default function Login() {
     <div className={styles.container}>
       <form className={styles.form} onSubmit={handleFormSubmit}>
         <h1>Login</h1>
-        <label htmlFor="username">Email</label>
+        
+        <div className={styles.inputusername}>
+        <label htmlFor="username">Email:</label>
         <input
           type="email"
           id="username"
@@ -43,8 +46,11 @@ export default function Login() {
           onChange={handleInputChange}
           required
         />
+        </div>
 
-        <label htmlFor="password">Password</label>
+        <div className={styles.inputpass}>
+        
+        <label htmlFor="password">Password:</label>
         <input
           type="password"
           id="password"
@@ -53,13 +59,14 @@ export default function Login() {
           onChange={handleInputChange}
           required
         />
+        </div>
 
         <div className={styles.rememberMe}>
           <input type="checkbox" id="rememberMe" name="rememberMe" />
           <label htmlFor="rememberMe">Remember me</label>
         </div>
 
-        <button type="submit">LOG IN</button>
+        <button className={styles.pill} type="button">LOG IN</button>
       </form>
 
     </div>

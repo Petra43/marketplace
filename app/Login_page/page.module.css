@@ -3,11 +3,12 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f2f2f2;
+    background-color: white;
   }
   
   .form {
-    background-color: #fff;
+    background-color: #ffffff;
+    font-family: sans-serif;
     padding: 40px;
     border-radius: 4px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -27,25 +28,73 @@
     margin-bottom: 10px;
   }
   
-  .input[type="email"],
-  .input[type="password"] {
-    border-radius: 80px;
+  .inputpass {
+    --padding: 14px ;
+
+    padding: var(--padding);
+    border-radius: 28px;
     display: flex;
     align-items: center;
-    margin: auto;
-    width: 480px;
-    height: 80px;
-    background: #eaeaea;
+    width: max-content;
+    background: #cecaca;
   }
   
-  .button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+  .inputusername {
+    --padding: 14px;
+    
+    font-family: 'Jua', sans-serif;
+    padding: var(--padding);
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    background: #cecaca;
+  }
+
+  .input [input="email"],
+  .input [input="password"]{
+    outline: none;
     border: none;
+    background: transparent;
+    font-size: 16px;
+    font-family: 'Jua', sans-serif;
+    color: #333333;
+    margin: 14px;
+  }
+  
+.pill-input {
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #4CAF50;
+  color: #333;
+}
+
+.pill-input:focus {
+  border-color: #333;
+  box-shadow: 0 0 5px #333;
+}
+
+.pill-input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #f8f9fa inset;
+  -webkit-text-fill-color: #333;
+}
+  
+  .pill {
+    font-size: 16px;
+    font-family: 'Readex Pro', sans-serif;
+    padding: 0.5em 1em ;
+    margin: 0.25em;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    background: #573e1a;
     cursor: pointer;
-    width: 100%;
+  }
+  .pill:hover {
+    background: #DCDBC6;
   }
   
   .remember-me {
@@ -58,10 +107,3 @@
     margin-right: 10px;
   }
   
-  .forgot-password {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 0.9rem;
-    text-decoration: none;
-    color: #444;
-  }
