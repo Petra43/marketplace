@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import React, { useState } from "react";
-import { Jua } from "next/font/google";
+import { Jua, Roboto } from "next/font/google";
 
 const jua = Jua({ subsets: ["latin"], weight: "400" });
 
@@ -15,7 +15,7 @@ export default function Login() {
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const formDataObject: FormData = {
+    const formDataObject = {
       username: formData.username,
       password: formData.password,
     };

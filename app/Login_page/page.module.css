@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Jua:400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400");
 
 .container {
   display: flex;
@@ -24,6 +25,7 @@
 }
 
 .label {
+  font-family: "Roboto", sans-serif;
   display: block;
   font-size: 1.1rem;
   font-weight: bold;
@@ -89,13 +91,14 @@
   background: #7e6f53;
 }
 
-.remember-me {
+.rememberMe {
   display: flex;
   align-items: center;
-  margin-top: 20px;
 }
 
-.remember-me label {
+.rememberMe label {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
   margin-right: 10px;
 }
 
