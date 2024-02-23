@@ -2,44 +2,16 @@ import React from "react"
 import style from "./commentSection.module.css"
 import CommentComponent from "../comment/comment";
 
-export default function CommentSection() {
+export default function CommentSection({comments}: {comments: ParentComment[]}) {
 
-  const exampleComments: ParentComment[] = [{
-    comment: {
-      owner: "Ryn Parker",
-      text: "Aliquip quis labore ipsum eiusmod voluptate. Aliqua pariatur eiusmod incididunt anim. Eu eiusmod pariatur exercitation laboris aute ad minim aliquip cupidatat aute officia. Non incididunt laborum labore officia elit est ad sit do laboris. Magna laboris dolor est ex ad dolor voluptate."
-    },
-    children: [
-    {
-      owner: "Anna",
-      text: "Aliquip quis labore ipsum eiusmod voluptate. Aliqua pariatur eiusmod incididunt anim. Eu eiusmod pariatur exercitation laboris aute ad minim aliquip cupidatat aute officia. Non incididunt laborum labore officia elit est ad sit do laboris. Magna laboris dolor est ex ad dolor voluptate."
-    },
-    {
-      owner: "Nirav",
-      text: "Aliquip quis labore ipsum eiusmod voluptate. Aliqua pariatur eiusmod incididunt anim. Eu eiusmod pariatur exercitation laboris aute ad minim aliquip cupidatat aute officia. Non incididunt laborum labore officia elit est ad sit do laboris. Magna laboris dolor est ex ad dolor voluptate."
-    }]
-  },
-  {
-    comment: {
-      owner: "Anna",
-      text: "Aliquip quis labore ipsum eiusmod voluptate. Aliqua pariatur eiusmod incididunt anim. Eu eiusmod pariatur exercitation laboris aute ad minim aliquip cupidatat aute officia. Non incididunt laborum labore officia elit est ad sit do laboris. Magna laboris dolor est ex ad dolor voluptate."
-    },
-    children: [{
-      owner: "Nirav",
-      text: "Aliquip quis labore ipsum eiusmod voluptate. Aliqua pariatur eiusmod incididunt anim. Eu eiusmod pariatur exercitation laboris aute ad minim aliquip cupidatat aute officia. Non incididunt laborum labore officia elit est ad sit do laboris. Magna laboris dolor est ex ad dolor voluptate."
-    },
-    {
-    owner: "Ryn Parker",
-    text: "Aliquip quis labore ipsum eiusmod voluptate. Aliqua pariatur eiusmod incididunt anim. Eu eiusmod pariatur exercitation laboris aute ad minim aliquip cupidatat aute officia. Non incididunt laborum labore officia elit est ad sit do laboris. Magna laboris dolor est ex ad dolor voluptate."
-  },]
-  }]
-
+  // creates the JSX for the reply rows
   const makeReplyRows = (comments: ListingComment[]) => {
     const replyRows: React.JSX.Element[] = [];
     comments.forEach((comment) => replyRows.push(<CommentComponent listingComment={comment}/>))
     return replyRows
   }
 
+  // creates the JSX for the comment rows
   const makeCommentRows = (comments: ParentComment[]) => {
     const commentRows: React.JSX.Element[] = []
     comments.forEach((comment) => {
@@ -57,14 +29,12 @@ export default function CommentSection() {
     return commentRows
   }
 
-  const commentRows:React.JSX.Element[]  = makeCommentRows(exampleComments)
+  const commentRows:React.JSX.Element[]  = makeCommentRows(comments)
 
   return(
     <div className={style.container}>
       <div className={style.title}>Comments and Questions</div>
-      <div className="comments">
-        {commentRows}
-      </div>
+      {commentRows}
     </div>
   )
 }
