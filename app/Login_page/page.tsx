@@ -2,6 +2,9 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import React, { useState } from "react";
+import { Jua } from "next/font/google";
+
+const jua = Jua({ subsets: ["latin"], weight: "400" });
 
 export default function Login() {
   const [formData, setFormData] = useState({
@@ -30,40 +33,43 @@ export default function Login() {
 
   return (
     <div className={styles.container}>
-      <form className={styles.form} onSubmit={handleFormSubmit}>
-        <h1>Login</h1>
+      <div>
+        <h1 className={jua.className}>Login</h1>
 
-        <input
-          className={styles.inputField}
-          placeholder="Email"
-          type="email"
-          id="username"
-          name="username"
-          value={formData.username}
-          onChange={handleInputChange}
-          required
-        />
+        <form className={styles.form} onSubmit={handleFormSubmit}>
+          <input
+            className={styles.inputField}
+            placeholder="Email"
+            type="username"
+            id="username"
+            name="username"
+            value={formData.username}
+            onChange={handleInputChange}
+            required
+          />
 
-        <input
-          className={styles.inputField}
-          placeholder="Password"
-          type="password"
-          id="password"
-          name="password"
-          value={formData.password}
-          onChange={handleInputChange}
-          required
-        />
+          <input
+            className={styles.inputField}
+            placeholder="Password"
+            type="password"
+            id="password"
+            name="password"
+            value={formData.password}
+            onChange={handleInputChange}
+            required
+          />
+          <div className={styles.flex}>
+            <div className={styles.rememberMe}>
+              <input type="checkbox" id="rememberMe" name="rememberMe" />
+              <label htmlFor="rememberMe">Remember me</label>
+            </div>
 
-        <div className={styles.rememberMe}>
-          <input type="checkbox" id="rememberMe" name="rememberMe" />
-          <label htmlFor="rememberMe">Remember me</label>
-        </div>
-
-        <button className={styles.pill} type="button">
-          LOG IN
-        </button>
-      </form>
+            <button className={styles.pill} type="button">
+              LOG IN
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
