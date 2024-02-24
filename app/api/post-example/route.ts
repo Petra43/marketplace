@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
   try {
     await client.connect();
 
-    const database = client.db('sample_mflix');
+    const database = client.db('marketplace_playground');
     const collection = database.collection('test-collection');
     
     await collection.insertOne({ data });

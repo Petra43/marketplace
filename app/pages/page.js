@@ -7,7 +7,7 @@ export default function Pages() {
 
   const handleSaveData = async () => {
     console.log(inputData)
-    const response = await fetch('api/save-data', {
+    const response = await fetch('api/post-example', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
