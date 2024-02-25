@@ -13,7 +13,7 @@ export default function ListingCard({listingResult}): React.FC<{}> {
           <Image src={babyknitted} width= {300} height={135} alt='knitted-baby-beanie' className={styles.listingimg} />
           <div className={styles.card}>
             <div className={styles.text}>
-              <h1>{listingResult.name}</h1>
+              <h3>{listingResult.name}</h3>
               <p>{listingResult.description}</p>
               <p className={styles.price}>{formatPrice(listingResult.price)}</p>
             </div>
