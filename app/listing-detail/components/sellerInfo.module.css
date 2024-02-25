@@ -1,0 +1,19 @@
+.container {
+  width: 15rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  padding-inline: .5rem;
+}
+
+.profileImage {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  background-color: blanchedalmond;
+}
+
+.infoContainer {
+  height: 3rem;
+  margin-left: .5rem;
+}
