@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Image from 'next/image';
 import babyknitted from '/public/babyknitted.jpg';
 import { ListingResult } from './producttypes';
 import styles from './productList.module.css';
+import { formatPrice } from './formatprice';
 
 
 export default function ListingCard({listingResult}): React.FC<{}> {
@@ -14,6 +15,7 @@ export default function ListingCard({listingResult}): React.FC<{}> {
             <div className={styles.text}>
               <h1>{listingResult.name}</h1>
               <p>{listingResult.description}</p>
+              <p className={styles.price}>{formatPrice(listingResult.price)}</p>
             </div>
           </div>
         </div>

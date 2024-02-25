@@ -21,6 +21,12 @@ margin-bottom: -20px;
   padding: 20px; 
   border-radius: 0px 0px 10px 10px; 
   color: #30240E; 
+  border: 1px solid #ddd;
+  
+}
+
+.card:hover {
+  background-color: #ffffff;
 }
 
 .card h2 {
@@ -31,4 +37,10 @@ margin-bottom: -20px;
 .card p {
   margin: 10px;
   margin-left: 0;
+}
+
+.price {
+  text-align: right; 
+  font-weight: bold; 
+  font-size: 2rem;
 }

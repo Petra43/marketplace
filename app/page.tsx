@@ -5,6 +5,7 @@ import { ListingResult } from "./components/listingitem/producttypes";
 
 
 
+
 export default function Home() {
   const listingResult:ListingResult = {
     id: 2,
