@@ -5,6 +5,6 @@ import SellerInfo from "./listing-detail/components/SellerInfo";
 
 export default function Home() {
   return (
-    <SellerInfo sellerId="20" />
+    <p>hello world</p>
   );
 }
