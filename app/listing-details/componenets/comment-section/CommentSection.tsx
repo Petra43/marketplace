@@ -29,7 +29,7 @@ export default function CommentSection({comments}: {comments: ParentComment[]}) 
     return commentRows
   }
 
-  const commentRows:React.JSX.Element[]  = makeCommentRows(comments)
+  const commentRows:React.JSX.Element[] = makeCommentRows(comments)
 
   return(
     <div className={style.container}>
