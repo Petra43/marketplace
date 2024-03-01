@@ -1,3 +1,18 @@
+// database info
+export const dbName = "marketplace";
+
+// db -- collections --
+export const collections = {
+  user: 'users',
+  listing: 'listings',
+  comment: 'comments',
+}
+
+
+
+
+// test data
+// td -- comment data --
 export const exampleComments: ParentComment[] = [{
   comment: {
     owner: "Ryn Parker",
