@@ -34,7 +34,7 @@ import { collections, dbName } from "../constants";
       return comments
 
     } catch (error) {
-      return error
+      return error // need to fix
     } finally {
       await client.close()
     }
