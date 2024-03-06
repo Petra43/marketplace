@@ -1,0 +1,8 @@
+.edit {
+  background-color: #DCDBC6;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}

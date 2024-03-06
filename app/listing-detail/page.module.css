@@ -14,3 +14,8 @@
   margin: 1rem;
   background-color: #DCDBC6;
 }
+
+.editLabelCont {
+  display: flex;
+  justify-content: space-between;
+}
