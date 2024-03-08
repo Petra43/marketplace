@@ -9,3 +9,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+.price {
+  font-size: 1.2rem;
+  margin-top: .5rem;
+}

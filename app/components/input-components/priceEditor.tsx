@@ -23,6 +23,7 @@ export default function PriceEditor(
       return (
         <div className={styles.container}>
           <input 
+            className={styles.price}
             type="number"
             name="priceEditor"
             value={price}
@@ -33,7 +34,7 @@ export default function PriceEditor(
     } else {
       return (
         <div className={styles.container}>
-          {price}
+          <span className={styles.price}>{price}</span>
           {toggleEditButton()}
         </div>
       )

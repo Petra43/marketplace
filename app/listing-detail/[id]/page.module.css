@@ -11,8 +11,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
+
   background-color: #DCDBC6;
+  max-width: 35rem;
+  max-height: 35rem;
 }
 
 .editLabelCont {

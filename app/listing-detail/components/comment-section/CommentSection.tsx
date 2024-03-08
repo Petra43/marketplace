@@ -33,7 +33,7 @@ export default function CommentSection({comments}: {comments: ParentComment[]}) 
 
   return(
     <div className={style.container}>
-      <div className={style.title}>Comments and Questions</div>
+      <h3 className={style.title}>Ask the seller a question</h3>
       {commentRows}
     </div>
   )
