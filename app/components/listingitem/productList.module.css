@@ -1,41 +1,35 @@
-.grid { 
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
-  align-items: stretch;
-  max-width: 1200px;
-  }
+/** Anna Created this Product List CSS which styles the Listing Card Component */
 
 .listingimg {
- width: 300px;
- height: 150px;
- border-radius: 20px 20px 0 0; 
+ width: auto;
+ height: auto;
+ border-radius: 10px 10px 0 0; 
  margin-bottom: -20px; 
+ object-fit: cover;
 }
 
 .text {
-  padding: 0 20px 20px;
+  padding: 1rem;
   font-size: 14px;
 }
 
 .card {
   background-color: #DCDBC6;
-  padding: 20px; 
-  border-radius: 0 0 10px 10px; 
+  border-radius: 10px; 
   color: #30240E; 
   border: 1px solid #ddd;
-  height: 150px;
-  width: 300px;
+  height: 20rem;
+  width: 20rem;
 }
 
 .card:hover {
   background-color: #eeede4;
-
 }
 
 .card h2 {
   margin-bottom: 5px;
   margin-left: 0;
+  font-family: "jua";
 }
 
 .card p {
@@ -49,3 +43,4 @@
   font-weight: bold; 
   font-size: 1rem;
 }
+
