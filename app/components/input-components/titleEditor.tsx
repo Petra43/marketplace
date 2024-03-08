@@ -4,7 +4,7 @@ import { useState } from "react"
 import styles from "./input.module.css"
 
 /**
- * component for editing rich text
+ * component for editing titles
  * @param {TitleType} titleType the content of the editor
  * @param {boolean} canEdit show user the edit button if they are allowed to edit
  * @param {Function} callback callback to update parents state
@@ -13,20 +13,12 @@ import styles from "./input.module.css"
  */
 export default function TitleEditor(
   {titleType, canEdit, title, callback}: 
-  {titleType: TitleType, canEdit: boolean, title: string, callback: Function}) 
-  {
-
+  {titleType: TitleType, canEdit: boolean, title: string, callback: Function}) {
+    
   const [isEdit, setIsEdit] = useState(false)
 
-  const toggleEditButton = () => {
-      if(canEdit) {
-        return <>
-          <button onClick={() => setIsEdit(!isEdit)}>edit</button>
-        </>
-      } else {
-        return <></>
-      }
-  }
+  // uses if/else shorthand
+  const toggleEditButton = () => canEdit ? <button onClick={() => setIsEdit(!isEdit)}>edit</button> : <></>
 
   const createOutput = ():React.JSX.Element => {
   let out: React.JSX.Element;
@@ -51,6 +43,7 @@ export default function TitleEditor(
     return (
       <div className={styles.container}>
         <input 
+          className={titleType}
           name="titleEditor" 
           type="text" 
           value={title} 
@@ -60,7 +53,9 @@ export default function TitleEditor(
       </div>
     )
 
-  } else return createOutput()
+  } else {
+    return createOutput()
+  }
 }
 
 type TitleType = "h1" | "h2"| "h3" | "h4" | "h5" | "h6"

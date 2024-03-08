@@ -1,5 +1,8 @@
 .edit {
-  background-color: #DCDBC6;
+  border-width: 1px;
+  border-style: inset;
+  border-color: #767676 #858585;
+  padding: 1px;
 }
 
 .container {
