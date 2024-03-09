@@ -1,9 +1,10 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import ListingCard from "./components/listingitem/ListingCard";
-import { ListingResult } from "./components/listingitem/producttypes";
-
-
+import { ListingResult } from "./components/listingitem/productTypes";
+import { listingInfo } from "./components/listingitem/constants";
+import React from "react";
+import ListingSection from "./components/listing-section/listingSection";
 
 
 export default function Home() {
@@ -15,11 +16,11 @@ export default function Home() {
     category: "Knitted",
     thumbnailURL: "",
   }
-  
+
   return (
     <>
-     <p>hello world</p>
-    <ListingCard listingResult={listingResult} />
+     <p></p>
+     <ListingSection></ListingSection>
     </>
   );
 }

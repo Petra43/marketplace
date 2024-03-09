@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Jua:400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400");
+
+.jua{
+  font-family: "jua", "latin";
+}
 * {
      box-sizing: border-box; 
     }
