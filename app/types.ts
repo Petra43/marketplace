@@ -31,7 +31,18 @@ type DbUser = {
 // db -- Listing api types --
 type DbListing = {
   _id: string;
-  OwnerId: string;
+  name: string;
+  ownerId: string;
+  description: string;
+  price: number;
+  images: DbImage[];
+  timeCreated: Date;
+  lastUpdated: Date;
+}
+
+type CreateDbListing = {
+  name: string;
+  ownerId: string;
   description: string;
   images: DbImage[];
   timeCreated: Date;
@@ -61,4 +72,10 @@ type DbComment = {
   parent: CommentParent;
   timeCreated: Date;
   lastUpdated: Date;
+}
+
+// db --- responses ---
+type InsertResponse = {
+  acknowledged: boolean;
+  insertedId: string;
 }

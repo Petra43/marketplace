@@ -1,7 +1,7 @@
 "use client"
 
 // --- framework imports ---
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { createListingUrl } from "../../constants";
 // --- style imports ---
@@ -33,7 +33,7 @@ export default function ListingDetail({ params }: { params: {id: string}}) {
 
   const createNewListing = () => {
     const newListingBoilerPlate = {
-      id: "new",
+      id: createListingUrl,
       ownerId: "current user id",
       name: "product name",
       description: "add description",
@@ -41,6 +41,27 @@ export default function ListingDetail({ params }: { params: {id: string}}) {
     }
     setListingDetails(newListingBoilerPlate)
   }
+
+  const getListingData = useCallback( async () => {
+    const request = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      },
+    }
+
+    const response = await fetch(`/api/listing/${listingId}`, request)
+    const responseBody = await response.json() as unknown as DbListing
+    const retrievedListing: ListingDetails = {
+      id: responseBody._id,
+      name: responseBody.name,
+      description: responseBody.description,
+      ownerId: responseBody.ownerId,
+      price: responseBody.price,
+    }
+    setListingDetails(retrievedListing)
+    
+  }, [listingId])
 
   useEffect(() => {
     //run api calls
@@ -50,19 +71,15 @@ export default function ListingDetail({ params }: { params: {id: string}}) {
     } else {
       try {
         // run api calls
+        getListingData()
         // if else is for testing
-        if (listingId === "test") {
-          setListingDetails(testListingDetails)
-          setLoading(false)
-        } else {
-          throw new TypeError("does not exist") 
-        }
+        setLoading(false)
       } catch (error) {
         console.error(error);
         router.push('/error');
       }
     }
-  },[loading, listingId, router])
+  },[loading, listingId, router, getListingData])
 
   const toggleEditDescription = () => {
     if(isOwner) {
@@ -79,9 +96,7 @@ export default function ListingDetail({ params }: { params: {id: string}}) {
     }
   }
 
-  const saveButton = () => isOwner ? <button> save </button> : <></>
-
-  
+  const saveButton = () => isOwner ? <button onClick={() => saveListing()}> save </button> : <></>
 
 // --- update functions --- 
 // each function creates a deep clone and changes the clones value then save clone as the listingDetails state
@@ -103,6 +118,33 @@ export default function ListingDetail({ params }: { params: {id: string}}) {
     newListingDetails.price = price;
     setListingDetails(newListingDetails);
   }
+
+  const saveListing = async () => {
+
+    const request = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(listingDetails)
+    }
+
+    const response = await fetch(`/api/listing`, request)
+    const responseBody = await response.json() as unknown as InsertResponse
+    
+    if (responseBody.acknowledged) {
+      let newListing = structuredClone(listingDetails) as ListingDetails
+      newListing.id = responseBody.insertedId
+      setListingDetails(newListing)
+      alert("save successful")
+      } else {
+        alert("save failed")
+      }
+      //console.log(listingDetails)
+      
+    
+    }
+
   // --- output ---
   if(loading) {
     // - waiting for useEffect -
