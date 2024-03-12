@@ -3,7 +3,7 @@
 // --- framework imports ---
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { createListingUrl, exampleComments } from "../../constants";
+import { createListingUrl } from "../../constants";
 // --- style imports ---
 import styles from "./page.module.css"
 // --- component imports ---
@@ -79,6 +79,10 @@ export default function ListingDetail({ params }: { params: {id: string}}) {
     }
   }
 
+  const saveButton = () => isOwner ? <button> save </button> : <></>
+
+  
+
 // --- update functions --- 
 // each function creates a deep clone and changes the clones value then save clone as the listingDetails state
 
@@ -134,8 +138,9 @@ export default function ListingDetail({ params }: { params: {id: string}}) {
               />
               {toggleEditDescription()}
             </div>
+            {saveButton()}
             <SellerInfo sellerId={listingDetails.ownerId}/>
-            <CommentSection comments={exampleComments}/>
+            <CommentSection listingId={listingId}/>
           </div>
         </div>
       </>
@@ -153,12 +158,4 @@ const testListingDetails: ListingDetails = {
   ownerId:"test",
   description: testContent,
   price: 19.99,
-}
-
-type ListingDetails = {
-  name: string;
-  id: string;
-  ownerId:string;
-  description: string;
-  price: number;
 }

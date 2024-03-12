@@ -8,6 +8,9 @@ export const collections = {
   comment: 'comments',
 }
 
+export const createListingUrl = "create-new-listing"
+
+
 // test data
 // td -- comment data --
 /*
