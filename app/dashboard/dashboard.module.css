@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Jua:400");
+
+.flexcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.h1 {
+  font-family: "Jua", sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+}
