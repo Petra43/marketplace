@@ -22,7 +22,7 @@ export default function TipTap({content, isEdit, setContent}: {content: string, 
   content: content,
   editable: isEdit,
   onUpdate({editor}) {
-    setContent(editor.getText())
+    setContent(editor.getJSON())
   },
 })
 
@@ -31,7 +31,7 @@ useEffect(() => {
   editor?.setOptions({
     editorProps: {
       attributes: {
-        class: isEdit ? styles.edit : ""
+        class: isEdit ? styles.edit : ''
       }
       
     }

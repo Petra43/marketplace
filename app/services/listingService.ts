@@ -52,7 +52,6 @@ export async function getListings(): DbListing[] {
   }
 }
 
-
 /**
  * 
  * Created by: Ryn

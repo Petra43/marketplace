@@ -97,7 +97,6 @@ export default function ListingDetail({ params }: { params: {id: string}}) {
   }
 
   const saveButton = () => isOwner ? <button onClick={() => saveListing()}> save </button> : <></>
-
 // --- update functions --- 
 // each function creates a deep clone and changes the clones value then save clone as the listingDetails state
 
@@ -140,9 +139,6 @@ export default function ListingDetail({ params }: { params: {id: string}}) {
       } else {
         alert("save failed")
       }
-      //console.log(listingDetails)
-      
-    
     }
 
   // --- output ---
