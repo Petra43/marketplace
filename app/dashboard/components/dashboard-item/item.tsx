@@ -1,9 +1,8 @@
 "use client";
-import Image from "next/image";
 import styles from "./item.module.css";
 import React from "react";
-import { Jua, Roboto } from "next/font/google";
-
+import { Jua } from "next/font/google";
+/**Created by Nirav Singh */
 const jua = Jua({ subsets: ["latin"], weight: "400" });
 
 // for each component's props, you have to define the type for the props
