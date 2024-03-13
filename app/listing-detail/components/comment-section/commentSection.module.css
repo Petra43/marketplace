@@ -1,0 +1,15 @@
+.replyContainer {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-top: .5rem;
+}
+
+.commentContainer {
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+}

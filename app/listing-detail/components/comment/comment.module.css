@@ -1,0 +1,13 @@
+.commentContainer {
+  background-color: #DCDBC6;
+  border-radius: 20px;
+  padding: .7rem;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: .8rem;
+}
+.comment { 
+  padding-left: 1rem;
+}
