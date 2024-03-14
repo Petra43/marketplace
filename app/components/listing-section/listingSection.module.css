@@ -1,0 +1,16 @@
+/** Anna Created this flex CSS so that the cards would be responsive and display as flex */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start; 
+    gap: 1rem;
+  }
+  
+  .flexItem {
+    flex: 0 0 calc(25% - 20px); 
+  } /* .flexitem not doing anything*/
+
+
+  
