@@ -1,0 +1,23 @@
+.pageContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.pageContainer > div {
+  width: 50%;
+}
+
+.imageViewer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #DCDBC6;
+  max-width: 35rem;
+  max-height: 35rem;
+}
+
+.editLabelCont {
+  display: flex;
+  justify-content: space-between;
+}

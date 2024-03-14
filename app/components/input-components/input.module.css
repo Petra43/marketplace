@@ -1,0 +1,16 @@
+.edit {
+  border-width: 1px;
+  border-style: inset;
+  border-color: #767676 #858585;
+  padding: 1px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 1.2rem;
+  margin-top: .5rem;
+}
