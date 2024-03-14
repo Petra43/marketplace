@@ -9,14 +9,6 @@ import ListingSection from "./components/listing-section/listingSection";
 
 
 export default function Home() {
-  const listingResult:ListingResult = {
-    id: 2,
-    name: "Knitted Beanie",
-    description: "Veniam aliquip nisi qui adipisicing est sit mollit eiusmod aliqua nostrud irure do sint quis.",
-    price: 20.00,
-    category: "Knitted",
-    thumbnailURL: "",
-  }
   const img = {width:"100%", height:"100%"} 
 
   return (
@@ -28,7 +20,7 @@ export default function Home() {
         className={styles.headerImage}/>
     </div>
   <h1 className={styles.headerTitle}>Most Trusted Market Place for <br/> Hand Made Products in <br/> New Zealand </h1>
-  <div>
+  <div className="listingSection">
   <ListingSection></ListingSection>
   </div>
 </div>
