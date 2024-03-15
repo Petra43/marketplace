@@ -1,12 +1,10 @@
 import Image from "next/image";
 import bannerImg from '/public/bannerImg.png';
 import styles from "./page.module.css";
-import ListingCard from "./components/listingitem/ListingCard";
-import { ListingResult } from "./components/listingitem/productTypes";
-import { listingInfo } from "./components/listingitem/constants";
 import React from "react";
 import ListingSection from "./components/listing-section/listingSection";
 
+/** Anna Created this page which renders the home page */
 
 export default function Home() {
   const img = {width:"100%", height:"100%"} 
