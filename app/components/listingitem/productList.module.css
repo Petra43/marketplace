@@ -13,6 +13,11 @@
   font-size: 14px;
 }
 
+.link {
+  text-decoration: none;
+  
+}
+
 .card {
   background-color: #DCDBC6;
   border-radius: 10px; 
@@ -20,6 +25,7 @@
   border: 1px solid #ddd;
   height: 20rem;
   width: 20rem;
+  text-decoration: none;
 }
 
 .card:hover {
