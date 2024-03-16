@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Jua:400");
+
+.itemFrame {
+  width: 600px;
+  height: 190px;
+  display: flex;
+  background-color: #d9d9d9;
+  border-radius: 45px;
+  font-family: "Jua", sans-serif;
+  margin-bottom: 10px;
+}
+
+.itemFrame img {
+  width: 300px;
+  height: 190px;
+  display: flex;
+  flex: 0.5;
+  border-top-left-radius: 45px;
+  border-bottom-left-radius: 45px;
+}
+
+.itemFrame h3 {
+  font-size: 25px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.itemFrame p {
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center, right;
+  padding-inline: 35px;
+}
+
+.itemFrame info {
+  display: flex;
+  flex: 0.5;
+}

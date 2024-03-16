@@ -1,0 +1,38 @@
+/** Anna styled product page header image*/
+
+.headerImage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 300px; /* Adjust the height as needed */
+}
+
+.headerImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 60%;
+}
+
+.headerTitle {
+    color: #DCDBC6;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 200; /* Position from the bottom */
+    left: 200; /* Position from the left */
+    transform: translate(10%, -150%); /* Align to the bottom left */
+    text-align: left;
+    z-index: 1;
+    width: 80%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+
+@media (max-width: 768px) {
+    .headerTitle {
+        width: 150%;
+        font-size: smaller;
+    }
+}

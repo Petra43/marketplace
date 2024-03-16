@@ -1,0 +1,52 @@
+/** Anna Created this Product List CSS which styles the Listing Card Component */
+
+.listingimg {
+ width: auto;
+ height: auto;
+ border-radius: 10px 10px 0 0; 
+ margin-bottom: -20px; 
+ object-fit: cover;
+}
+
+.text {
+  padding: 1rem;
+  font-size: 14px;
+}
+
+.link {
+  text-decoration: none;
+  
+}
+
+.card {
+  background-color: #DCDBC6;
+  border-radius: 10px; 
+  color: #30240E; 
+  border: 1px solid #ddd;
+  height: 20rem;
+  width: 20rem;
+  text-decoration: none;
+}
+
+.card:hover {
+  background-color: #eeede4;
+}
+
+.card h2 {
+  margin-bottom: 5px;
+  margin-left: 0;
+  font-family: "jua";
+}
+
+.card p {
+  margin: 5px;
+  margin-left: 0;
+  font-size: 12px;
+}
+
+.price {
+  text-align: right; 
+  font-weight: bold; 
+  font-size: 1rem;
+}
+
