@@ -25,3 +25,14 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - add a `.env.local` file to the marketplace folder
 - add the following to that file `MONGODB_URI=<connection-string>`
   - remember to replace `<connection-string>` with one from your MongoDB Atlas cluster
+
+## pages that cannot be accessed via the interface
+
+- http://localhost:3000/Signup-page
+- http://localhost:3000/Login_page
+- http://localhost:3000/dashboard
+- http://localhost:3000/listing-detail/create-new-listing
+
+## notes
+
+we started implementing some pages and the backend to get users working but have run out of time so it is non functional. This most noticeable on the sign in and sign up pages 
