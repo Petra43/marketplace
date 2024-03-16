@@ -2,6 +2,7 @@
 import styles from "./item.module.css";
 import React from "react";
 import { Jua } from "next/font/google";
+import TipTap from "@/app/components/input-components/tiptapEditor";
 /**Created by Nirav Singh */
 const jua = Jua({ subsets: ["latin"], weight: "400" });
 
@@ -25,7 +26,7 @@ export const Item: React.FC<Props> = ({ name, information }) => {
 
       <div className={styles.info}>
         <h3>{name}</h3>
-        <p>{information}</p>
+        <TipTap content={information} isEdit={false} setContent={() => {}} />
       </div>
     </div>
   );
