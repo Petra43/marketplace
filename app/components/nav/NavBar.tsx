@@ -6,6 +6,8 @@ import search from '/public/search.png';
 import styles from './navbar.module.css';
 import burger from '/public/burger.png';
 
+/**Anna created this Nav bar which is used in the layout*/
+
 const NavBar: React.FC<{}> = () => {
   return (
     <div className={styles.container}>
