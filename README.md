@@ -23,5 +23,5 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - have mongoDB atlas account
 - have a cluster
 - add a `.env.local` file to the marketplace folder
-- add the following to that file `MONGODB_URI=mongodb+srv:<connection-string>`
+- add the following to that file `MONGODB_URI=<connection-string>`
   - remember to replace `<connection-string>` with one from your MongoDB Atlas cluster
