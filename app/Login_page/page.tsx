@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import React, { useState } from "react";
 import { Jua, Roboto } from "next/font/google";
-
+/**Created by Nirav Singh */
 const jua = Jua({ subsets: ["latin"], weight: "400" });
 
 export default function Login() {

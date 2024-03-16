@@ -2,7 +2,7 @@
 import styles from "./page.module.css";
 import React, { useState } from "react";
 import { Jua } from "next/font/google";
-
+/**Created by Nirav Singh */
 const jua = Jua({ subsets: ["latin"], weight: "400" });
 
 export default function signup() {
