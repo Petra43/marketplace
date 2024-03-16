@@ -4,6 +4,12 @@ import React, { useEffect, useState } from "react"
 import style from "./commentSection.module.css"
 import CommentComponent from "../comment/Comment";
 
+/**
+ * 
+ * @param listingId
+ * @returns a component with multiple comment components
+ * created by: Ryn Parker
+ */
 export default function CommentSection({listingId}: {listingId: string}) {
 
   //const testId = "65e112dd536ebd2518bf1783" // for testing
