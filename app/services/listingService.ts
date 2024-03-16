@@ -6,7 +6,7 @@ import { collections, dbName } from "../constants";
 /**
  * 
  * @param listingId 
- * @returns 
+ * @returns a single listing
  * Created by: Ryn
  */
 export async function getListingById(listingId: string) {
@@ -30,7 +30,7 @@ export async function getListingById(listingId: string) {
 
 /**
  * 
- * @returns 
+ * @returns all listings
  * Created by: Ryn
  */
 export async function getListings(): DbListing[] {
@@ -54,7 +54,9 @@ export async function getListings(): DbListing[] {
 
 /**
  * 
- * Created by: Ryn
+ * @param listing 
+ * @returns the updated listing
+ * created by: Ryn Parker
  */
 export async function updateListing(listing: DbListing) {
   const client = new MongoClient(process.env.MONGODB_URI as string)
@@ -85,7 +87,9 @@ export async function updateListing(listing: DbListing) {
 
 /**
  * 
- * Created by: Ryn
+ * @param listing 
+ * @returns new listing id
+ * created by: Ryn Parker
  */
 export async function createListing(listing: CreateDbListing) {
   const client = new MongoClient(process.env.MONGODB_URI as string)

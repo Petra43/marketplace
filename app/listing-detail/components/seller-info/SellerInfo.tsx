@@ -3,6 +3,13 @@ import style from "./sellerInfo.module.css"
 import Image from "next/image";
 import userIcon from "/public/assets/icons/user-3296.png"
 
+
+/**
+ * incomplete and waiting for user functionality to be implemented
+ * @param sellerId - not used  
+ * @returns a component that displays info about a listings owner
+ * created by: Ryn Parker
+ */
 export default function SellerInfo({sellerId}:{sellerId: string}) {
   
   const sellerName = "Petra Parker"

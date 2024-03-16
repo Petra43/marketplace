@@ -3,7 +3,16 @@
 import { MongoClient } from "mongodb"
 import { collections, dbName } from "../constants";
 
-  // possibly a poor implementation due to number of DB requests
+  
+  /**
+   * 
+   * @param parentId 
+   * @param parentType 
+   * @returns an array of comment information
+   * created by: Ryn Parker
+   */
+
+  // comment section is likely a poor implementation due to number of DB requests and it's performance
   export async function getCommentsByParentId(parentId: string, parentType: ParentType): Promise<ListingComment[]>{
     const client = new MongoClient(process.env.MONGODB_URI as string)
     const comments: ListingComment[] = []
